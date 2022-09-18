@@ -1,33 +1,42 @@
 /*colors
     off-white: #f0eeeb
     dark-blue: #011212
-    dark-teal-2: #014c69
-    dark-teal: #006c70
-    teal: #05becf
+    dark-blue-2: #014c69
+    dark-blue: #006c70
+    light-blue: #05becf
+    teal:#26f6b4;
 */
 
 * {
   margin: 0;
   padding: 0;
   font-family: "Courier New", Courier, monospace;
+  box-sizing: border-box;
 }
 body {
   background-color: #f0eeeb;
 }
 
 h1 {
-  /*font-family: Impact, "Arial Narrow Bold", sans-serif;
-  font-size: 200%;*/
+  /*font-family: Impact, "Arial Narrow Bold", sans-serif;*/
+
+  font-size: 3vw;
   letter-spacing: 0.1em;
 }
 
-H2 {
+.front-end {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.1em;
-
-  font-size: 300%;
+  font-size: 4vw;
+  transform: scaleY(1.5);
+  z-index: 0;
 }
 
+.bracket {
+  font-family: "Courier New", Courier, monospace;
+  color: #f0eeeb;
+  font-size: 10vw;
+}
 header {
   color: #014c69;
   width: 100%;
@@ -36,10 +45,11 @@ header {
   justify-content: space-between;
   position: fixed;
   top: 0px;
-  padding: 1em 0;
+  padding: 2em 0;
   background-color: #05becf;
   align-items: center;
   border-bottom: #014c69;
+  z-index: 5;
 }
 
 logo {
@@ -65,7 +75,7 @@ ul li {
 li a {
   background: #fff;
   padding: 0.5em 0.75em;
-  border-radius: 10px;
+  border-radius: 5px;
   text-decoration: none;
   font-size: 1.2em;
   font-weight: bold;
@@ -82,41 +92,90 @@ li a:hover {
 main {
   margin-top: 4em;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
 .hero {
   width: 100%;
+  height: 100vh;
   color: #f0eeeb;
   background-color: #014c69;
   display: flex;
   justify-content: center;
-  padding: 5em;
+  align-items: center;
+  padding: 5em 0;
+  margin-top: -5.5vh;
 }
 
 .intro {
   width: 100%;
   padding: 1em;
-
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
 
-  border: 1px black solid;
+.info {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /*border: 1px solid black;*/
+  margin-top: -6vh;
 }
 
 .prof-pic {
-  width: 30%;
-  height: auto;
+  width: 30vw;
+  height: 50vh;
   display: flex;
-  justify-content: end;
-  margin-left: 15em;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10em;
+  border: 1px solid black;
 }
 
 .prof-pic img {
   width: 100%;
   background-color: white;
   padding: 1em;
-  border-radius: 10px;
+  border-radius: 5px;
+}
+
+.web-dev {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 250%;
+  text-decoration: underline;
+  text-align: center;
+  padding-top: 2.5em;
+}
+
+.skills {
+  height: 100vh;
+}
+
+.skills-list {
+  width: 100%;
+  display: flex;
+  padding: 5em 0;
+  justify-content: space-around;
+}
+
+.skill {
+  width: 100%;
+  height: 250px;
+
+  text-align: center;
+}
+
+.skills img {
+  height: 100%;
+  padding: 2rem 5em;
+  border-radius: 5px;
+}
+
+.projects {
+  background-color: #05becf;
+
+  border: 1px solid black;
 }
