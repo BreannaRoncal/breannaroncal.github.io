@@ -16,13 +16,11 @@
 }
 body {
   width: 100%;
-  min-width: 1200px;
+
   background-color: #f0eeeb;
 }
 
 h1 {
-  /*font-family: Impact, "Arial Narrow Bold", sans-serif;*/
-
   font-size: 3vw;
   letter-spacing: 0.1em;
 }
@@ -30,7 +28,7 @@ h1 {
 .front-end {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.1em;
-  font-size: 4vw;
+  font-size: 3vw;
   transform: scaleY(1.5);
   z-index: 0;
 }
@@ -41,8 +39,8 @@ h1 {
   font-size: 10vw;
 }
 header {
-  color: #014c69;
   width: 100%;
+  color: #014c69;
   height: 5%;
   display: flex;
   justify-content: space-between;
@@ -51,7 +49,8 @@ header {
   padding: 2.5em 0;
   background-color: #f0eeeb;
   align-items: center;
-  border-bottom: #014c69;
+  border-bottom: 1px solid #014c69;
+  box-shadow: 0 3px 6px#014c69;
   z-index: 5;
 }
 
@@ -143,7 +142,7 @@ ul li {
   list-style-type: none;
   margin-left: 2.2em;
 }
-li a {
+.nav-button {
   background: #05becf;
   padding: 0.5em 0.75em;
   border-radius: 5px;
@@ -151,17 +150,18 @@ li a {
   font-size: 1.2em;
   font-weight: bold;
 }
-li a:link,
-li a:visited {
+.nav-button:link,
+.nav-button:visited {
   color: #014c69;
 }
-li a:hover {
+.nav-button:hover {
   color: #fff;
   background-color: #014c69;
 }
 
 main {
-  margin-top: 4em;
+  width: 100%;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -171,12 +171,12 @@ main {
   width: 100%;
   height: 100vh;
   color: #f0eeeb;
-  background-color: #014c69;
+  background-color: #05becf;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 5em 0;
-  margin-top: -5.5vh;
+  margin-top: 4vh;
 }
 
 .intro {
@@ -185,15 +185,17 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  margin: 0 1em;
 }
 
 .info {
-  width: 90%;
+  width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  /*border: 1px solid black;*/
-  margin-top: -6vh;
+  margin-top: -4vh;
 }
 
 .prof-pic {
@@ -202,44 +204,92 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 10em;
+  margin-left: 10vw;
 }
 
 .prof-pic img {
   width: 100%;
   background-color: white;
-  border: 1em solid #05becf;
+  border: 1em solid #014c69;
 
   border-radius: 5px;
 }
 
-.web-dev {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 250%;
-  text-decoration: underline;
-  text-align: center;
-  padding-top: 2.5em;
-}
-
 .projects {
-  background-color: #05becf;
+  width: 100%;
+  background-color: #014c69;
 
   border: 1px solid black;
 }
 
+/* CONTACT PAGE */
+.page-title {
+  color: #f0eeeb;
+  font-size: 5vw;
+  letter-spacing: 0.1em;
+  margin-bottom: 2em;
+}
+.contacts {
+  width: 100%;
+  height: 100vh;
+  background-color: #05becf;
+  padding: 5em 0;
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contact-buttons img {
+  width: 1.5em;
+  margin-top: 5px;
+  margin-right: 0.75em;
+}
+
+.contact {
+  color: #f0eeeb;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 0.5em 0.75em;
+  /*padding: 1em 1em .2em 1em;*/
+  background-color: #014c69;
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact:link,
+.contact:visited {
+  color: #f0eeeb;
+}
+
+.contact:hover {
+  color: #014c69;
+  background-color: #f0eeeb;
+}
 /* HAMBURGER MENU */
 
-@media (max-width: 1120px) {
+@media (max-width: 1200px) {
   .menu-button-container {
     display: flex;
   }
   .menu {
+    width: 100%;
     position: absolute;
     top: 0;
     margin-top: 70px;
     left: 0;
     flex-direction: column;
-    width: 100%;
     justify-content: center;
     align-items: center;
   }
@@ -268,5 +318,21 @@ main {
   }
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
+  }
+
+  .hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .intro {
+    width: 60%;
+  }
+  .prof-pic {
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
   }
 }
